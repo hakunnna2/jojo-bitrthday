@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 
 const MusicControl: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const songUrl = new URL('../music/happy-birthday.mp3', import.meta.url).href;
 
   useEffect(() => {
     // Attempt to play music immediately. 
@@ -26,11 +27,10 @@ const MusicControl: React.FC = () => {
       ref={audioRef}
       onEnded={handleSongEnd}
       /* 
-         PATH OF THE SONG:
-         Currently set to 'music/happy-birthday.mp3' as per your requirements.
-         Make sure the 'music' folder exists and contains 'happy-birthday.mp3'.
+        PATH OF THE SONG:
+        Bundled from /music/happy-birthday.mp3 so it works after deploy.
       */
-      src="music/happy-birthday.mp3" 
+      src={songUrl}
       className="hidden"
     />
   );
