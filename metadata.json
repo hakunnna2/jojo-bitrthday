@@ -1,0 +1,7 @@
+{
+  "name": "Romantic Birthday Surprise",
+  "description": "A beautiful, magical surprise website featuring a date-based gate and a cinematic scrolling love letter.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
